@@ -15,26 +15,37 @@ let nextsnake = [{ x: 160, y: 150 },
 { x: 130, y: 150 },
 { x: 120, y: 150 }];
 
+
+function clearCanvas() {
+    ctx.fillStyle = "white"; ctx.strokeStyle = "black";
+    ctx.fillRect(0, 0, snakeCanvas.width, snakeCanvas.height);
+    ctx.strokeRect(0, 0, snakeCanvas.width, snakeCanvas.height);
+}
+
+// setTimeout(function onTick() {  clearCanvas();  advanceSnake();  drawSnake();}, 100);
+
 function drawSnakePart(snakePart) {
     ctx.fillStyle = 'green'; ctx.strokestyle = 'darkgreen';
     ctx.fillRect(snakePart.x, snakePart.y, 10, 10);
     ctx.strokeRect(snakePart.x, snakePart.y, 10, 10);
 }
 
-function drawSnake() {
-    snake.forEach(drawSnakePart);
-}
+
 
 Container.addEventListener("click", (e) => {
     if (e.target.matches("button")) {
         drawSnake()
         sbutton.style.display = "none";
+
     }
 })
 
-function advanceSnake(){
-    const head = {x: snake[0].x + dx, y: snake[0].y + dy};
+function advanceSnake() {
+    const head = { x: snake[0].x + dx, y: snake[0].y + dy };
     snake.unshift(head);
     snake.pop();
 }
 
+function drawSnake() {
+    snake.forEach(drawSnakePart);
+}
