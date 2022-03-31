@@ -15,7 +15,6 @@ let nextsnake = [{ x: 160, y: 150 },
 { x: 130, y: 150 },
 { x: 120, y: 150 }];
 
-
 function clearCanvas() {
     ctx.fillStyle = "white"; ctx.strokeStyle = "black";
     ctx.fillRect(0, 0, snakeCanvas.width, snakeCanvas.height);
@@ -29,8 +28,6 @@ function drawSnakePart(snakePart) {
     ctx.fillRect(snakePart.x, snakePart.y, 10, 10);
     ctx.strokeRect(snakePart.x, snakePart.y, 10, 10);
 }
-
-
 
 Container.addEventListener("click", (e) => {
     if (e.target.matches("button")) {
