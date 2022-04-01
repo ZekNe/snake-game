@@ -29,6 +29,7 @@ body {
 .snakeContainer {
 
     display: flex;
+    flex-direction: column; 
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -54,4 +55,35 @@ body {
     display: inline-block;
     font-size: 50px;
     box-shadow: 3px 3px 3px black;
+}
+
+#score {
+    position: relative;
+    top: 5%;
+    right: 225px;
+    color: rgb(0, 150, 12);
+    background-color: rgb(44, 44, 44);
+    position: relative;
+    z-index: 1;
+    font-size: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-style: outset;
+    border-color:rgb(86, 0, 88) ;
+
+}
+
+#reset {
+    position: relative;
+    left: 185px;
+    color: rgb(0, 150, 12);
+    background-color: rgb(44, 44, 44);
+    position: relative;
+    z-index: 1;
+    font-size: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-style: outset;
+    border-color:rgb(86, 0, 88) ;
+
 }
