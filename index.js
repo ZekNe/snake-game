@@ -10,6 +10,8 @@ let snake = [{ x: 150, y: 150 },
 { x: 120, y: 150 },
 { x: 110, y: 150 }];
 
+let dx = 10;
+let dy = 0;
 let score = 0;
 
 function clearCanvas() {
@@ -25,7 +27,6 @@ function drawSnakePart(snakePart) {
 }
 
 function randomTen(min, max) { return Math.round((Math.random() * (max - min) + min) / 10) * 10; }
-
 function createFood() {
     foodX = randomTen(0, snakeCanvas.width - 10);
     foodY = randomTen(0, snakeCanvas.height - 10);
@@ -50,9 +51,6 @@ Container.addEventListener("click", (e) => {
         createFood()
     }
 })
-
-let dx = 10;
-let dy = 0;
 
 function didGameEnd() {
     for (let i = 4; i < snake.length; i++) {
